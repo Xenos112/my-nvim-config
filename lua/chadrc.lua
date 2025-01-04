@@ -52,6 +52,12 @@ M.nvdash = {
     { txt = "─", hl = "NvDashFooter", no_gap = true, rep = true },
   },
 }
-
+M.ui = {
+  telescope = { style = "bordered" },
+}
+M.colorify = {
+  mode = 'bg',
+  enabled = true,
+}
 
 return M
