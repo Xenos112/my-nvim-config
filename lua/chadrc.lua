@@ -59,6 +59,10 @@ M.ui = {
   statusline = {
     theme = 'default',
     separator_style = 'round'
+  },
+  cmp = {
+    icons = true,
+    style = 'flat_dark',
   }
 }
 
