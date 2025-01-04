@@ -53,10 +53,18 @@ M.nvdash = {
   },
 }
 M.ui = {
-  telescope = { style = "bordered" },
+  telescope = {
+    style = "bordered",
+  },
+  statusline = {
+    theme = 'default',
+    separator_style = 'round'
+  }
 }
+
 M.colorify = {
-  mode = 'bg',
+  mode = 'virtual',
+
   enabled = true,
 }
 
