@@ -113,4 +113,8 @@ return {
       line_number_text    = "Line %s out of %s",
     }
   },
+  {
+    "windwp/nvim-autopairs",
+    enabled = false,
+  },
 }
