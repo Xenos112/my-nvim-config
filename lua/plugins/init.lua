@@ -99,7 +99,7 @@ return {
       client_id           = "1325135620707713035",
       log_level           = 'info',
       debounce_timeout    = 10,
-      enable_line_number  = false,
+      enable_line_number  = true,
       blacklist           = {},
       buttons             = true,
       file_assets         = {},
