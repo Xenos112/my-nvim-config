@@ -1,4 +1,12 @@
 return {
+{
+	"lewis6991/gitsigns.nvim",
+	event = "BufRead",
+	config = function()
+		require("gitsigns").setup({})
+	end,
+},
+{
   "andweeb/presence.nvim",
   lazy = false,
   opts = {
@@ -21,4 +29,18 @@ return {
     workspace_text = "Flexing on YEAHHHH",
     line_number_text = "Line %s out of %s",
   },
+},
+{
+  "smoka7/hop.nvim",
+  event = "BufRead",
+  version = "*",
+  opts = {
+    keys = "etovxqpdygfblzhckisuran",
+  },
+  config = function()
+    require("hop").setup({})
+
+    vim.keymap.set("n", "<CR>", ":HopWord<CR>", { desc = "Hop to word under cursor", silent = true })
+  end,
+}
 }
