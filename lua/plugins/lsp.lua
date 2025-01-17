@@ -64,9 +64,9 @@ return {
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
-      "hrsh7th/cmp-nvim-lsp",    
-      "hrsh7th/cmp-buffer",      
-      "hrsh7th/cmp-path",        
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
       "L3MON4D3/LuaSnip",
       "saadparwaiz1/cmp_luasnip",
     },
@@ -85,39 +85,64 @@ return {
             if cmp.visible() then
               cmp.select_next_item()
             else
-              fallback()            
+              fallback()
             end
           end, { "i", "s" }),
           ["<S-Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
               cmp.select_prev_item()
             else
-              fallback()            
+              fallback()
             end
           end, { "i", "s" }),
           ["<CR>"] = cmp.mapping.confirm({ select = true }),
         }),
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
-          { name = "luasnip" }, 
+          { name = "luasnip" },
         }, {
-          { name = "buffer" },  
-          { name = "path" },    
+          { name = "buffer" },
+          { name = "path" },
         }),
       })
     end,
   },
   {
-    "nvimtools/none-ls.nvim",
+    "stevearc/conform.nvim",
+    event = "BufRead",
     config = function()
-      local null_ls = require("null-ls")
-      null_ls.setup({
-        sources = {
-          null_ls.builtins.formatting.prettier,
-          null_ls.builtins.diagnostics.eslint_d,
-          null_ls.builtins.formatting.stylua,
+      require("conform").setup {
+        format_on_save = {
+          timeout_ms = 3000,
+          lsp_fallback = true,
         },
-      })
+        formatters_by_ft = {
+          markdown = { "prettier" },
+          html = { "prettier" },
+          css = { "prettier" },
+          scss = { "prettier" },
+          javascript = { "prettier", "eslint" },
+          javascriptreact = { "prettier", "eslint" },
+          typescriptreact = { "prettier", "eslint" },
+          json = { "prettier" },
+          yaml = { "prettier" },
+          lua = { "stylua" },
+          vue = { "prettier" },
+        },
+        formatters_by_ft_with_sync = {
+          markdown = { "prettier" },
+          html = { "prettier" },
+          css = { "prettier" },
+          scss = { "prettier" },
+          javascript = { "prettier", "eslint" },
+          javascriptreact = { "prettier", "eslint" },
+          typescript = { "prettier" },
+          json = { "prettier" },
+          yaml = { "prettier" },
+          lua = { "stylua" },
+          vue = { "prettier" },
+        },
+      }
     end,
-  },
+  }
 }
