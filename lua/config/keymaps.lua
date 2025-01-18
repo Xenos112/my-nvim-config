@@ -13,3 +13,7 @@ map("n", "<S-tab>", ":bp<CR>", {})
 map("n", "<leader>x", ":bd<CR>", {})
 map("v", "<A-j>", ":m '>+1<CR>gv=gv", {})
 map("v", "<A-k>", ":m '<-2<CR>gv=gv", {})
+
+-- copy and paste from system clipboard
+map({ "n", 'v' }, "y", "\"*y", {})
+map({ "n", 'v' }, "p", "\"*p", {})
