@@ -11,5 +11,5 @@ map("n", "<tab>", ":bn<CR>", {})
 map("n", "<S-tab>", ":bp<CR>", {})
 
 map("n", "<leader>x", ":bd<CR>", {})
-map({ 'i', 'n' }, "<A-j>", "<Esc>:m .+1<CR>==gi", {})
-map({ 'i', 'n' }, "<A-k>", "<Esc>:m .-2<CR>==gi", {})
+map("v", "<A-j>", ":m '>+1<CR>gv=gv", {})
+map("v", "<A-k>", ":m '<-2<CR>gv=gv", {})
