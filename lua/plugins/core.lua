@@ -75,5 +75,12 @@ return {
       vim.keymap.set("n", "<leader>fm", builtins.marks, { desc = "Telecope Marks" })
       vim.keymap.set("n", "<leader>fc", builtins.commands, { desc = "Telecope Commands" })
     end,
-  }
+  },
+  {
+    'echasnovski/mini.nvim',
+    version = '*',
+    config = function()
+      require('mini.ai').setup({})
+    end
+  },
 }
