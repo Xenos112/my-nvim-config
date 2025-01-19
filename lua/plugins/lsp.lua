@@ -20,6 +20,7 @@ return {
           "cssls",
           "clangd",
           "vuels",
+          "jdtls"
         },
       })
 
@@ -35,6 +36,7 @@ return {
         eslint = {},
         cssls = {},
         clangd = {},
+        jdtls = {},
         vuels = {
           filetypes = { "vue" },
         },
@@ -129,6 +131,7 @@ return {
           yaml = { "prettier" },
           lua = { "stylua" },
           vue = { "prettier" },
+          java = { "google-java-format" },
         },
         formatters_by_ft_with_sync = {
           markdown = { "prettier" },
