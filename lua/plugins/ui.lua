@@ -1,5 +1,28 @@
 return {
   {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+    },
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    },
+    config = function()
+      require("noice").setup({
+        notify = {
+          enabled = false,
+        },
+        messages = {
+          enabled = false,
+        },
+        error = {
+          enabled = false,
+        },
+      })
+    end,
+  },
+  {
     "nvim-lualine/lualine.nvim",
     dependencies = {
       "nvim-tree/nvim-web-devicons",
@@ -130,14 +153,13 @@ return {
     end
   },
   {
-    "rose-pine/neovim",
-    name = "rose-pine",
+    "folke/tokyonight.nvim",
     lazy = false,
+    priority = 1000,
     config = function()
-      vim.cmd("colorscheme rose-pine")
+      vim.cmd("colorscheme tokyonight-night")
       vim.cmd('hi Comment gui=italic')
       vim.cmd('hi String gui=italic')
-      vim.cmd [[hi Normal guibg=NONE ctermbg=NONE]]
       vim.cmd('hi Keyword gui=italic')
     end,
   },
