@@ -130,7 +130,7 @@ return {
           json = { "prettier" },
           yaml = { "prettier" },
           lua = { "stylua" },
-          vue = { "prettier" },
+          vue = { "prettier", "eslint" },
           java = { "google-java-format" },
         },
         formatters_by_ft_with_sync = {
@@ -144,7 +144,7 @@ return {
           json = { "prettier" },
           yaml = { "prettier" },
           lua = { "stylua" },
-          vue = { "prettier" },
+          vue = { "prettier", "eslint" },
         },
       }
     end,
