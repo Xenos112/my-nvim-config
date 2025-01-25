@@ -153,11 +153,12 @@ return {
     end
   },
   {
-    "folke/tokyonight.nvim",
+    "rose-pine/neovim",
     lazy = false,
+    name = "rose-pine",
     priority = 1000,
     config = function()
-      vim.cmd("colorscheme tokyonight-night")
+      vim.cmd("colorscheme rose-pine")
       vim.cmd('hi Comment gui=italic')
       vim.cmd('hi String gui=italic')
       vim.cmd('hi Keyword gui=italic')
