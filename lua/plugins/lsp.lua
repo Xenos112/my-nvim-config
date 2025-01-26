@@ -20,7 +20,8 @@ return {
           "cssls",
           "clangd",
           "vuels",
-          "jdtls"
+          "jdtls",
+          "prismals",
         },
       })
 
@@ -40,6 +41,7 @@ return {
         vuels = {
           filetypes = { "vue" },
         },
+        prismals = {},
       }
 
       for server, config in pairs(servers) do
