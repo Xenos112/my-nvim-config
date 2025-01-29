@@ -1,27 +1,5 @@
 return {
 	{
-		"folke/noice.nvim",
-		event = "VeryLazy",
-		opts = {},
-		dependencies = {
-			"MunifTanjim/nui.nvim",
-			"rcarriga/nvim-notify",
-		},
-		config = function()
-			require("noice").setup({
-				notify = {
-					enabled = false,
-				},
-				messages = {
-					enabled = false,
-				},
-				error = {
-					enabled = false,
-				},
-			})
-		end,
-	},
-	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
