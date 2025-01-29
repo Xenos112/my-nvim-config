@@ -34,11 +34,9 @@ return {
 		end,
 	},
 	{
-		"supermaven-inc/supermaven-nvim",
-		event = "BufRead",
-		config = function()
-			require("supermaven-nvim").setup({})
-		end,
+		"Exafunction/codeium.vim",
+		event = "BufEnter",
+		config = function() end,
 	},
 	{
 		"ThePrimeagen/harpoon",
