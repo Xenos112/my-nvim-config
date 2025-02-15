@@ -1,7 +1,7 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
-		event = "BufRead",
+		event = "VeryLazy",
 		run = ":TSUpdate",
 		config = function()
 			require("nvim-treesitter.configs").setup({
@@ -27,7 +27,7 @@ return {
 	},
 	{
 		"folke/todo-comments.nvim",
-		event = "BufReadPost",
+		event = "VeryLazy",
 		config = function()
 			require("todo-comments").setup({})
 			vim.keymap.set("n", "<leader>td", ":TodoTelescope<CR>", { desc = "Todo QuickFix" })
@@ -35,12 +35,13 @@ return {
 	},
 	{
 		"Exafunction/codeium.vim",
-		event = "BufEnter",
+
+		event = "BufReadPost",
 		config = function() end,
 	},
 	{
 		"ThePrimeagen/harpoon",
-		cmd = { "Harpoon" },
+		event = "VeryLazy",
 		config = function()
 			require("harpoon").setup({})
 			local mark = require("harpoon.mark")
@@ -76,7 +77,7 @@ return {
 	{
 		"echasnovski/mini.nvim",
 		version = "*",
-		event = "VimEnter",
+		event = "VeryLazy",
 		config = function()
 			require("mini.ai").setup({})
 			require("mini.pairs").setup({})
