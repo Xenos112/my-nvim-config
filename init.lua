@@ -18,7 +18,3 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins", {})
-
-local vagabond = require('colors.vagabond')
-vim.opt.termguicolors = true
-vim.cmd("colorscheme vagabond")
